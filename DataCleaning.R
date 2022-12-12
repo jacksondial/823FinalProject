@@ -1,6 +1,6 @@
 library(tidyverse)
 library(caTools)
-data <- read.csv("ADS.csv")
+data <- read.csv("combined_data.csv")
 sum(is.na(data))
 
 lab_cols <- colnames(data)[3:43]
