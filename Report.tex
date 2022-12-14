@@ -7,6 +7,19 @@
 \usepackage{blindtext}
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
 \title{%
   Comparing Complexity of Neural Networks \\
   \large BIOSTAT823  Statistical Programming for Big Data \\
@@ -53,7 +66,7 @@ It is also important to note that given the output of the model is a probability
 Table 1 (Section 7.1) clearly shows that model 3 is the most optimal model. Given the already complex nature of a neural network with just a single hidden layer, tripling the layers as in model 3 does not necessarily add much complexity from an interpretability standpoint. The accuracy of the model is not particularly great, especially considering the prevalence of outcome is ~13\%, though it can be confidently concluded that the model is in fact learning, and not simply labeling each observation as not experiencing the outcome. The AUPRC of 0.302 is rather good, considering the baseline for this metric is the prevalence of the outcome in the test dataset, 13\%. It shows a good ability to correctly classify survivors (no outcome) without incorrectly classifying the non-survivors (experience outcome). The AUROC of 0.767 means that 76.7\% of the time, the model will assign a higher absolute risk of outcome to a randomly selected individual who did experience the outcome than to an individual who did not experience the outcome. This metric shows slightly better than a 50\% improvement over a coin flip. 
 
 
-\section{Limitations/Next Steps}
+\section{Further Research}
 The conclusion of the project is that adding more layers to a neural network led to an overall better model, using the specified metrics for evaluation. A clear next step would be to follow the pattern of adding a hidden layer, ideally until no further improvements are made. Further exploration of hyperparameter tuning would also be important, as these were not explored in this project. Specific hyperparameters that should be explored for their effect on the model are the learning rate, dropout rate, batch size, and units within each dense layer.
 
 \end{multicols}
@@ -74,5 +87,8 @@ The conclusion of the project is that adding more layers to a neural network led
  \hline
 \end{tabular}
 \end{center}
+\subsection{GitHub Repository}
+See \href{https://github.com/jacksondial/823FinalProject}{GitHub repository} for all project work.
+
 \end{document}
 
